@@ -1,103 +1,86 @@
+
 ---
 
 # 🧠 SmartTask Manager
 
-> A responsive, full-stack task management web application built using the MERN stack (MongoDB, Express.js, React/Vanilla JS, Node.js) — with localStorage fallback for offline use.
+<p align="center">
+  <img src="https://raw.githubusercontent.com/mriganka-saikia/Smart-Task-Manager-App/main/frontend/images/banner.jpg" alt="SmartTask Manager Banner" width="90%">
+</p>
+
+<p align="center">
+  <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white" /></a>
+  <a href="https://expressjs.com/"><img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" /></a>
+  <a href="https://react.dev/"><img src="https://img.shields.io/badge/Frontend-HTML%2FCSS%2FJS-blue?style=for-the-badge&logo=html5&logoColor=white" /></a>
+  <a href="https://www.mongodb.com/"><img src="https://img.shields.io/badge/MongoDB-4DB33D?style=for-the-badge&logo=mongodb&logoColor=white" /></a>
+  <a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/TailwindCSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" /></a>
+  <a href="https://jwt.io/"><img src="https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white" /></a>
+  <a href="https://vercel.com/"><img src="https://img.shields.io/badge/Frontend%20Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel&logoColor=white" /></a>
+  <a href="https://render.com/"><img src="https://img.shields.io/badge/Backend%20Hosted%20on-Render-46E3B7?style=for-the-badge&logo=render&logoColor=black" /></a>
+</p>
 
 ---
 
-## 📋 Table of Contents
+## 🧩 Overview
 
-* [Overview](#overview)
-* [Features](#features)
-* [Tech Stack](#tech-stack)
-* [Project Architecture](#project-architecture)
-* [Screenshots](#screenshots)
-* [Installation & Setup](#installation--setup)
-* [Environment Variables](#environment-variables)
-* [API Endpoints](#api-endpoints)
-* [LocalStorage Fallback](#localstorage-fallback)
-* [Testing](#testing)
-* [Deployment](#deployment)
-* [Team & Credits](#team--credits)
+**SmartTask Manager** is a responsive, full-stack web app built using the **MERN stack (MongoDB, Express.js, React/Vanilla JS, Node.js)**.
+It allows users to manage tasks efficiently with **JWT-based authentication**, **cloud persistence**, and **offline localStorage fallback**.
 
----
-
-## 🚀 Overview
-
-**SmartTask Manager** is a modern and intuitive task management system that allows users to:
-
-* Register and log in securely using **JWT authentication**.
-* Create, update, and delete personal tasks.
-* Manage task status (**Pending / Completed**).
-* Work **offline** via `localStorage` simulation (no backend required).
-* Enjoy a responsive, mobile-first UI built with **TailwindCSS**.
+> 💡 Designed for productivity. Built for performance.
 
 ---
 
 ## ✨ Features
 
-✅ User registration and login with secure password hashing (bcrypt).
-✅ JWT authentication for protected task operations.
-✅ Fully responsive UI with TailwindCSS.
-✅ CRUD operations on tasks (Create, Read, Update, Delete).
-✅ LocalStorage fallback when the backend or internet is unavailable.
-✅ Deployment-ready (tested on **Vercel** and **Render**).
-✅ Modular folder structure and clean, commented code.
+* 🔐 Secure Login / Signup with JWT Authentication
+* 🧾 CRUD operations on tasks (Add, Edit, Delete, Update Status)
+* 💾 LocalStorage fallback for offline usage
+* 📱 Fully responsive with TailwindCSS
+* ☁️ Deployed with Render (Backend) + Vercel (Frontend)
+* 🧠 Clean modular folder structure
 
 ---
 
 ## 🧰 Tech Stack
 
-| Layer               | Technology                                  | Purpose                            |
-| ------------------- | ------------------------------------------- | ---------------------------------- |
-| **Frontend**        | HTML5, CSS3, JavaScript (ES6+), TailwindCSS | Responsive UI and DOM manipulation |
-| **Backend**         | Node.js + Express.js                        | RESTful API server                 |
-| **Database**        | MongoDB Atlas + Mongoose                    | Data persistence                   |
-| **Auth**            | JSON Web Token (JWT)                        | Secure authentication              |
-| **Version Control** | Git + GitHub                                | Collaboration and history          |
-| **Deployment**      | Render (Backend), Vercel (Frontend)         | Hosting the live app               |
+| Layer           | Technology                                  | Description                      |
+| --------------- | ------------------------------------------- | -------------------------------- |
+| Frontend        | HTML5, CSS3, JavaScript (ES6+), TailwindCSS | Responsive and modern UI         |
+| Backend         | Node.js, Express.js                         | RESTful API server               |
+| Database        | MongoDB Atlas + Mongoose                    | Cloud-based data persistence     |
+| Auth            | JSON Web Token (JWT), bcrypt.js             | Secure authentication            |
+| Version Control | Git + GitHub                                | Collaboration and source control |
+| Deployment      | Vercel (Frontend), Render (Backend)         | Hosting the live app             |
 
 ---
 
-## 🏗️ Project Architecture
+## 🏗️ Architecture Diagram
 
 ```mermaid
 flowchart LR
-A[Frontend (HTML/CSS/JS)] -->|Fetch API / Axios| B[Express.js Backend]
+A[Frontend (HTML/CSS/JS)] -->|Fetch API| B[Express.js Server]
 B -->|Mongoose ORM| C[(MongoDB Atlas)]
-A -->|LocalStorage (offline)| A
+A -->|LocalStorage (Offline)| A
 ```
-
----
-
-## 🖼️ Screenshots
-
-| Login Page                            | Dashboard Page                                | Edit Modal                          |
-| ------------------------------------- | --------------------------------------------- | ----------------------------------- |
-| ![Login](images/screenshot-login.png) | ![Dashboard](images/screenshot-dashboard.png) | ![Edit](images/screenshot-edit.png) |
-
-*(Replace with your actual screenshots)*
 
 ---
 
 ## ⚙️ Installation & Setup
 
-### 1️⃣ Clone the repository
+### 🔹 Clone the Repository
 
 ```bash
-git clone https://github.com/yourusername/smarttask-manager.git
-cd smarttask-manager
+git clone https://github.com/mriganka-saikia/Smart-Task-Manager-App.git
+cd Smart-Task-Manager-App
 ```
 
-### 2️⃣ Backend Setup
+### 🔹 Backend Setup
 
 ```bash
 cd backend
 npm install
 ```
 
-Create `.env` file:
+Create a `.env` file:
 
 ```
 MONGO_URI=your_mongodb_atlas_connection
@@ -105,68 +88,50 @@ JWT_SECRET=your_secret_key
 PORT=5000
 ```
 
-Start server:
+Start the server:
 
 ```bash
 npm run dev
 ```
 
-### 3️⃣ Frontend Setup
+### 🔹 Frontend Setup
 
-If using plain HTML:
-
-* Open `/frontend/login.html` in browser
-  If you want a local dev server:
+Open the `frontend/login.html` in your browser directly,
+or run locally with:
 
 ```bash
 cd frontend
-npm install
-npm start
+npx serve
 ```
 
----
-
-## 🔐 Environment Variables
-
-| Variable     | Description                     | Example                                     |
-| ------------ | ------------------------------- | ------------------------------------------- |
-| `MONGO_URI`  | MongoDB Atlas connection string | mongodb+srv://user:pass@cluster.mongodb.net |
-| `JWT_SECRET` | Secret key for JWT signing      | mysecret123                                 |
-| `PORT`       | Backend port                    | 5000                                        |
+Then visit: **[http://localhost:3000](http://localhost:3000)**
 
 ---
 
-## 📡 API Endpoints
+## 🔐 API Endpoints
 
-| Method | Endpoint              | Description               | Auth |
-| ------ | --------------------- | ------------------------- | ---- |
-| POST   | `/api/register`       | Register new user         | ❌    |
-| POST   | `/api/login`          | Login user and return JWT | ❌    |
-| POST   | `/api/addTask`        | Add a new task            | ✅    |
-| GET    | `/api/getTasks`       | Get all tasks             | ✅    |
-| PUT    | `/api/updateTask/:id` | Update task details       | ✅    |
-| DELETE | `/api/deleteTask/:id` | Delete a task             | ✅    |
-
-✅ = Requires Authorization header:
-`Authorization: Bearer <token>`
+| Method | Endpoint              | Description             | Auth |
+| ------ | --------------------- | ----------------------- | ---- |
+| POST   | `/api/register`       | Register a new user     | ❌    |
+| POST   | `/api/login`          | Login and receive JWT   | ❌    |
+| GET    | `/api/getTasks`       | Retrieve all user tasks | ✅    |
+| POST   | `/api/addTask`        | Add a new task          | ✅    |
+| PUT    | `/api/updateTask/:id` | Update an existing task | ✅    |
+| DELETE | `/api/deleteTask/:id` | Delete a task           | ✅    |
 
 ---
 
-## 🧠 LocalStorage Fallback
+## 🧠 Offline Mode (LocalStorage Fallback)
 
-When the backend is not connected or offline:
-
-* Tasks are stored in `localStorage` as a JSON array.
-* Supports **Add**, **Edit**, **Delete**, and **Mark as Completed** operations.
-* Data persists between sessions in the same browser.
-
-You can switch between backend and offline modes seamlessly.
+* When backend or network is offline, all task operations work locally.
+* Tasks are stored under `localStorage.tasksLocal`.
+* Works seamlessly between online/offline modes.
 
 ---
 
 ## 🧪 Testing
 
-Use **Postman** to test all API routes:
+Use **Postman** to test:
 
 * `/register`
 * `/login`
@@ -175,18 +140,19 @@ Use **Postman** to test all API routes:
 * `/updateTask/:id`
 * `/deleteTask/:id`
 
-Attach screenshots in your project report as evidence of successful tests.
+Include screenshots of successful test responses in your documentation.
 
 ---
 
 ## ☁️ Deployment
 
-| Layer        | Platform                        | Command / Setup                                   |
-| ------------ | ------------------------------- | ------------------------------------------------- |
-| **Frontend** | Vercel / Netlify / GitHub Pages | Upload `/frontend` folder                         |
-| **Backend**  | Render / Railway                | Deploy `/backend` folder and set `.env` variables |
+| Layer    | Platform                                             | Description               |
+| -------- | ---------------------------------------------------- | ------------------------- |
+| Frontend | [Vercel](https://vercel.com)                         | Deploy `/frontend` folder |
+| Backend  | [Render](https://render.com)                         | Deploy `/backend` folder  |
+| Database | [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) | Free cloud database       |
 
-After deployment, update your `BASE_URL` in `frontend/js/auth.js` and `frontend/js/dashboard.js`:
+After deployment, update:
 
 ```js
 const BASE_URL = "https://your-backend.onrender.com/api";
@@ -194,29 +160,27 @@ const BASE_URL = "https://your-backend.onrender.com/api";
 
 ---
 
-## 👨‍💻 Team & Credits
+## 👨‍💻 Author
 
-**Project Members / Contributors**
-
-| Name                | Role             | Responsibility                                         |
-| ------------------- | ---------------- | ------------------------------------------------------ |
-| Your Name           | Developer        | Full-stack development, frontend & backend integration |
-| (Optional) Teammate | UI Designer      | Tailwind styling and UX                                |
-| (Optional) Teammate | Backend Engineer | API development, JWT, MongoDB                          |
+**👤 Mriganka Saikia**
+📧 [smriganka00@gmail.com](mailto:smriganka00@gmail.com)
+🌐 [GitHub Profile](https://github.com/mriganka-saikia)
 
 ---
 
 ## 🏁 License
 
-This project is open-source under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
 ## 💬 Acknowledgments
 
-* [TailwindCSS](https://tailwindcss.com/) for beautiful, responsive UI components
-* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) for cloud database hosting
-* [Render](https://render.com/) & [Vercel](https://vercel.com/) for seamless free deployment
-* [Postman](https://postman.com) for API testing
+* [TailwindCSS](https://tailwindcss.com) — for rapid, elegant styling
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) — for free cloud hosting
+* [Render](https://render.com) — for backend deployment
+* [Vercel](https://vercel.com) — for frontend deployment
+* [Postman](https://postman.com) — for API testing
 
 ---
+
