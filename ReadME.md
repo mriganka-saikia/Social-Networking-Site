@@ -55,12 +55,16 @@ It allows users to manage tasks efficiently with **JWT-based authentication**, *
 
 ## 🏗️ Architecture Diagram
 
+
+```markdown
+## 🏗️ Architecture Diagram
+
 ```mermaid
 flowchart LR
-A[Frontend (HTML/CSS/JS)] -->|Fetch API| B[Express.js Server]
-B -->|Mongoose ORM| C[(MongoDB Atlas)]
-A -->|LocalStorage (Offline)| A
-```
+    A[Frontend (HTML / CSS / JS)] -->|Fetch API| B[Express.js Server]
+    B -->|Mongoose ORM| C[(MongoDB Atlas)]
+    A -->|LocalStorage (Offline Mode)| A
+
 
 ---
 
