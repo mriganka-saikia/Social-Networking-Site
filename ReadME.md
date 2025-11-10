@@ -4,7 +4,7 @@
 # 🧠 SmartTask Manager
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/mriganka-saikia/Smart-Task-Manager-App/main/frontend/images/banner.jpg" alt="SmartTask Manager Banner" width="90%">
+  <img src="https://raw.githubusercontent.com/mriganka-saikia/Smart-Task-Manager-App/main/frontend/images/banner.png" alt="SmartTask Manager Banner" width="90%">
 </p>
 
 <p align="center">
@@ -56,14 +56,16 @@ It allows users to manage tasks efficiently with **JWT-based authentication**, *
 ## 🏗️ Architecture Diagram
 
 
-```markdown
 ## 🏗️ Architecture Diagram
 
 ```mermaid
 flowchart LR
-    A[Frontend (HTML / CSS / JS)] -->|Fetch API| B[Express.js Server]
+    A[Frontend (HTML / CSS / JS)] -->|Fetch API or Axios| B[Express.js Server (Node.js)]
     B -->|Mongoose ORM| C[(MongoDB Atlas)]
     A -->|LocalStorage (Offline Mode)| A
+    A -->|JWT Token| B
+    B -->|JSON Response| A
+
 
 
 ---
